@@ -1,0 +1,255 @@
+/* Diseño Minimalista y Elegante (Clean Tech) - MEXOTECH */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { 
+    margin: 0; 
+    background-color: #fbfbfb; /* Fondo casi blanco, ultra limpio */
+    color: #333; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.8; 
+}
+
+a { color: #164a66; text-decoration: none; transition: all 0.3s ease; }
+a:hover { color: #c96c34; }
+
+/* Navegación Minimalista con efecto de subrayado */
+nav { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 40px; 
+    padding: 30px 20px; 
+    background-color: #ffffff; 
+    border-bottom: 1px solid #f0f0f0; 
+}
+nav a { 
+    font-size: 13px; 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    color: #666; 
+    position: relative;
+    padding-bottom: 5px;
+}
+nav a:hover, nav a[aria-current] { color: #164a66; }
+/* Línea animada debajo de los links */
+nav a::after {
+    content: ''; position: absolute; width: 0; height: 2px;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    background-color: #c96c34; transition: width 0.3s ease;
+}
+nav a:hover::after, nav a[aria-current]::after { width: 100%; }
+
+/* Tipografía Refinada */
+h1, h2, h3 { 
+    color: #111; 
+    font-weight: 300; /* Letra más delgada y elegante */
+    text-align: center; 
+    margin: 0 0 15px 0;
+}
+h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: -1px; }
+h2 { font-size: 2rem; color: #164a66; }
+h3 { font-size: 1.3rem; font-weight: 500; color: #333; }
+
+/* Hero Section - Centrado Absoluto */
+.hero { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    padding: 100px 20px; 
+    background-color: #ffffff;
+}
+.hero-img { 
+    max-width: 260px; /* Logo discreto y elegante */
+    height: auto; 
+    margin-bottom: 40px; 
+}
+.hero p {
+    font-size: 19px;
+    font-weight: 300;
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* Botones Premium */
+.botones { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.boton { 
+    display: inline-block; 
+    background-color: #164a66; 
+    color: #fff; 
+    padding: 16px 40px; 
+    font-size: 12px; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 4px; 
+    border: 1px solid #164a66;
+    box-shadow: 0 10px 20px rgba(22, 74, 102, 0.15);
+}
+.boton:hover { 
+    background-color: #fff; 
+    color: #164a66; 
+    box-shadow: none;
+}
+.boton-secundario { 
+    background-color: transparent; 
+    color: #c96c34; 
+    border-color: #c96c34; 
+    box-shadow: none;
+}
+.boton-secundario:hover { 
+    background-color: #c96c34; 
+    color: #fff; 
+}
+
+/* Marquesina Ultra Discreta */
+.franja-mexotech { 
+    background-color: #0a0a0a; 
+    color: #fff; 
+    padding: 10px; 
+    font-size: 11px; 
+    letter-spacing: 4px; 
+    text-transform: uppercase; 
+    font-weight: 300;
+}
+.franja-mexotech span { color: #c96c34; font-weight: 600;}
+
+/* Layout general */
+.seccion { max-width: 1050px; margin: auto; padding: 90px 20px; }
+
+/* Grid de Servicios Minimalista */
+.grid-servicios { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 40px; 
+    margin-top: 60px; 
+}
+.tarjeta { 
+    background-color: #fff; 
+    padding: 50px 40px; 
+    border-radius: 8px; 
+    text-align: center;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.03); /* Sombra muy difuminada */
+    border: 1px solid #f9f9f9;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+.tarjeta:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 40px rgba(22, 74, 102, 0.08); 
+}
+.tarjeta p { color: #888; font-size: 15px; margin-bottom: 25px; line-height: 1.6;}
+
+ul.lista-tech { 
+    list-style: none; 
+    padding: 0; 
+    color: #555; 
+    font-size: 14px;
+}
+ul.lista-tech li { 
+    margin-bottom: 12px; 
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+ul.lista-tech li:last-child { border-bottom: none; padding-bottom: 0; }
+
+/* Tabla Catálogo tipo Dashboard Moderno */
+.tabla-tech { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: #fff; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 40px rgba(0,0,0,0.03); 
+    margin-top: 40px; 
+}
+.tabla-tech th { 
+    background: #fff; 
+    color: #999; 
+    padding: 25px 20px; 
+    text-align: center; 
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+}
+.tabla-tech td { 
+    padding: 30px 20px; 
+    border-bottom: 1px solid #f9f9f9; 
+    vertical-align: middle; 
+    text-align: center;
+}
+.tabla-tech tr:last-child td { border-bottom: none; }
+.img-catalogo { 
+    border-radius: 6px; 
+    max-width: 130px;
+    transition: transform 0.4s ease; 
+}
+.img-catalogo:hover { transform: scale(1.05); }
+
+/* Formularios Flotantes */
+.form-pedido { 
+    display: flex; 
+    flex-direction: column; 
+    max-width: 500px; 
+    margin: auto; 
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.03);
+}
+.form-pedido label { 
+    font-size: 11px; 
+    color: #999; 
+    margin-bottom: 8px; 
+    text-align: left; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.form-pedido input, .form-pedido select, .form-pedido textarea { 
+    width: 100%; 
+    padding: 14px 15px; 
+    margin-bottom: 25px; 
+    border: 1px solid #eee; 
+    border-radius: 6px; 
+    background: #fafafa; 
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.form-pedido input:focus, .form-pedido select:focus, .form-pedido textarea:focus {
+    border-color: #164a66;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22, 74, 102, 0.1);
+}
+.form-pedido .btn-comprar { 
+    background: #c96c34; 
+    color: white; 
+    border: none; 
+    padding: 16px; 
+    border-radius: 6px; 
+    font-weight: 500; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    cursor: pointer; 
+    transition: background 0.3s ease; 
+}
+.form-pedido .btn-comprar:hover { background: #b05c2a; }
+
+/* Footer ultra limpio */
+footer { 
+    text-align: center; 
+    padding: 60px 20px; 
+    background-color: #fff; 
+    border-top: 1px solid #f5f5f5;
+    color: #aaa; 
+    margin-top: 80px; 
+    font-size: 12px; 
+    font-weight: 300;
+    letter-spacing: 1px;
+}

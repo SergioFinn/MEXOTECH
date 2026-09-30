@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXOTECH - Accesorios y Soluciones Telefónicas</title>
+    <link rel="stylesheet" href="estilos_mexotech.css">
+</head>
+<body id="arriba">
+
+    <nav aria-label="Navegación principal">
+        <a href="inicio_mexotech.html" aria-current="page">Inicio</a>
+        <a href="catalogo_electronica.php">Catálogo</a>
+        <a href="empresa_mexotech.html">Nuestra Empresa</a>
+        <a href="soporte_tecnico.php">Soporte Técnico</a>
+        <a href="seguridad_envios_mexotech.html">Seguridad y Envíos</a>
+    </nav>
+
+    <div class="franja-mexotech">
+        <marquee id="anuncio" behavior="scroll" direction="left" scrollamount="5">
+            SMARTPHONES · ACCESORIOS · PROTECCIÓN · SOPORTE TÉCNICO · MEXOTECH
+        </marquee><button id="pausar" class="control-anuncio" type="button">Pausar anuncio</button>
+    </div>
+
+    <header class="hero">
+        <h1>Telefonía y soluciones MEXOTECH</h1>
+        <img src="img/logo_mexotech.jpg" alt="Logo MEXOTECH" class="logo">
+        <p style="font-size: 18px; max-width: 650px; margin: 0 auto; color: #4a5568;">
+            Catálogo académico de dispositivos, accesorios y consultas de soporte técnico. 
+        </p>
+        
+        <div class="botones">
+            <a href="catalogo_electronica.php" class="boton">Ver Equipos</a>
+            <a href="soporte_tecnico.php" class="boton boton-secundario">Consultar Soporte</a>
+        </div>
+        <p style="margin-top: 20px;"><a href="#soluciones">Ver nuestras soluciones ↓</a></p>
+    </header>
+
+    <main class="seccion" id="soluciones">
+        <h2>Ingeniería y Servicio a tu alcance</h2>
+        <p style="color: #4a5568;">Brindamos un ecosistema completo para tu conectividad móvil.</p>
+
+        <div class="grid-servicios">
+            <article class="tarjeta">
+                <h3 style="color: #c96c34;">Venta de Equipos</h3>
+                <p>Smartphones de ejemplo para distintas necesidades de comunicación.</p>
+                <ul class="lista-tech">
+                    <li>Consulta condiciones de garantía por modelo.</li>
+                    <li>Revisa la compatibilidad de red de cada equipo.</li>
+                </ul>
+            </article>
+
+            <article class="tarjeta">
+                <h3 style="color: #c96c34;">Accesorios Premium</h3>
+                <p>Maximiza la vida útil de tu dispositivo con accesorios compatibles con tu equipo.</p>
+                <ul class="lista-tech">
+                    <li>Consulta características y compatibilidad de cargadores.</li>
+                    <li>Fundas y accesorios de protección de ejemplo.</li>
+                </ul>
+            </article>
+
+            <article class="tarjeta">
+                <h3 style="color: #c96c34;">Laboratorio Técnico</h3>
+                <p>Consultas de diagnóstico y reparación según disponibilidad.</p>
+                <ul class="lista-tech">
+                    <li>Consulta sobre pantallas y baterías.</li>
+                    <li>Orientación para revisión de equipos.</li>
+                </ul>
+            </article>
+        </div>
+    </main>
+
+    <footer id="abajo">
+        <p>MEXOTECH © 2026 · Proyecto Académico de Tecnologías Web</p>
+        
+        <a href="#arriba" style="display: inline-block; margin-top: 15px; padding: 8px 15px; border: 1px solid #4a5568; border-radius: 4px; color: #a0aec0;">Volver arriba</a>
+    </footer>
+
+<script>const a=document.getElementById('anuncio'),b=document.getElementById('pausar');let parado=false;function pausa(v){parado=v;if(v)a.stop();else a.start();b.textContent=v?'Reanudar anuncio':'Pausar anuncio';}b.addEventListener('click',()=>pausa(!parado));if(matchMedia('(prefers-reduced-motion: reduce)').matches)pausa(true);</script></body>
+</html>
